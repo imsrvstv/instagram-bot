@@ -1,5 +1,11 @@
-un = 'your username'
+un ='your username'
 pw = 'your password'
+
+file = open('../unpw.txt', 'r')
+a = file.readlines()
+un = a[0]
+pw = a[1]
+file.close()
 
 link = 'https://instagram.com/'
 
@@ -25,10 +31,12 @@ browser.get(link+un)
 elem = browser.find_element_by_partial_link_text('following')
 elem.click()
 
-n = int(input('Enter Number of Peoples To Unfollow: '))
+n = 100
+'''int(input('Enter Number of Peoples To Unfollow: '))'''
 while(n != 0):
-	browser.find_element_by_xpath("//button[text()='Following']").click() 
-	time.sleep(0.5)
+	browser.find_element_by_xpath("//button[text()='Following']").click()
+	time.sleep(1)
 	browser.find_element_by_xpath("//button[text()='Unfollow']").click()
-	time.sleep(0.5)
+	time.sleep(1)
+	browser.find_elements_by_xpath("//button[text()='Following']")[1].send_keys(Keys.NULL)
 	n -= 1
