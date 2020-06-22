@@ -1,6 +1,6 @@
-# Project Title
+# Instagram Bot
 
-**Instagram Bot** using Python and Selenium.
+Using Python and Selenium.
 
 ## Getting Started
 
