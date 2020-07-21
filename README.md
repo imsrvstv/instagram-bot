@@ -10,7 +10,7 @@ Change value of `un` to `'your_instagram_username'` and `pw` to `'your_instagram
 
 ### Prerequisites
 
-You need Python 3 to run the script and Selenium>=3.141.0.
+You need Python 3 and Selenium>=3.141.0 to run the script.
 
 ## Built With
 
